@@ -76,7 +76,7 @@ var budgetController = (function () {
 
       // 4. Return the new element
       return newItem;
-    },  
+    },
 
     deleteItem: function (type, id) {
       var ids, index;
@@ -84,7 +84,7 @@ var budgetController = (function () {
       // id = 6
       //data.allItems[type][id];
       // ids = [1 2 4 6 8]
-      //index = 3
+      //index = 3 (since the ids may not be in the same sorted order)
 
       ids = data.allItems[type].map(function (current) {
         return current.id;
@@ -144,7 +144,7 @@ var budgetController = (function () {
         totalExp: data.totals.exp,
         percentage: data.percentage,
       };
-    }, 
+    },
 
     testing: function () {
       console.log(data);
@@ -212,7 +212,7 @@ var UIController = (function () {
 
     addListItem: function (obj, type) {
       var html, newHtml, element;
-      
+
       // 1. Create HTML string with placeholder text
       if (type === 'inc') {
         element = DOMstrings.incomeContainer;
@@ -296,7 +296,7 @@ var UIController = (function () {
     displayMonth: function () {
       var now, months, month, year;
 
-      now = new Date();
+      now = new Date(); // date object constructor
       //var christmas = new Date(2016, 11, 25);
 
       months = [
@@ -366,7 +366,7 @@ var controller = (function (budgetCtrl, UICtrl) {
     // 1. Calculate the budget
     budgetCtrl.calculateBudget();
 
-    // 2. Return the budget
+    // 2. Return the budget (since we're returning getbudget fn thats why storing it in a variable)
     var budget = budgetCtrl.getBudget();
 
     // 3. Display the budget on the UI
@@ -384,7 +384,7 @@ var controller = (function (budgetCtrl, UICtrl) {
     UICtrl.displayPercentages(percentages);
   };
 
-  var   ctrlAddItem = function () {
+  var ctrlAddItem = function () {
     var input, newItem;
 
     // 1. Get the field input data
