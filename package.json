@@ -1,0 +1,19 @@
+{
+  "name": "budgety",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raaghaav/Budgety-App.git"
+  },
+  "author": "raghav goel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raaghaav/Budgety-App/issues"
+  },
+  "homepage": "https://github.com/raaghaav/Budgety-App#readme"
+}
