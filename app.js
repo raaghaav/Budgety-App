@@ -342,7 +342,7 @@ var UIController = (function () {
   };
 })();
 
-// GLOBAL APP CONTROLLER
+// GLOBAL APP CONTROLLERr
 var controller = (function (budgetCtrl, UICtrl) {
   var setupEventListeners = function () {
     var DOM = UICtrl.getDOMstrings();
